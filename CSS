@@ -1,0 +1,145 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #000000;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+    
+}
+
+.nav-links li {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+    color: #fff;
+}
+
+.nav-links li:hover {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background:url('bg.jpeg');
+    color: white;
+    height: 60vh;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.cta-button {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #003d80;
+    transform: scale(1.05);
+}
+
+.section {
+    padding: 2em;
+    text-align: center;
+}
+
+.events-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 1em 0;
+}
+
+.event-card {
+    background:url('bgg.jpeg');
+    color: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+.gallery-section {
+    padding: 1em;
+}
+
+.gallery-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.gallery-grid img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.1);
+}
+
+.join-section input {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.join-section input:focus {
+    border-color: #007bff;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.join-section button {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.join-section button:hover {
+    background-color: #003d80;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
