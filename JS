@@ -1,0 +1,32 @@
+// JavaScript for DEVS Club Website
+
+// Navigation Toggle for Mobile
+const navToggle = document.querySelector(".nav-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+navToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("nav-links-visible");
+});
+
+// Close navigation when a link is clicked (for single-page scrolling)
+const navLinkItems = document.querySelectorAll(".nav-links li a");
+navLinkItems.forEach(link => {
+    link.addEventListener("click", () => {
+        navLinks.classList.remove("nav-links-visible");
+    });
+});
+
+// Join Form Submission
+const joinForm = document.getElementById("joinForm");
+
+joinForm.addEventListener("submit", (event) => {
+    event.preventDefault(); // Prevent form from actually submitting
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+
+    // Display confirmation alert or message
+    alert(Thank you, ${name}! We have received your request to join DEVS Club. We’ll reach out to you at ${email} soon!);
+
+    // Optionally reset the form
+    joinForm.reset();
+});
